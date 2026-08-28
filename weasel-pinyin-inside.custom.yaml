@@ -1,0 +1,146 @@
+# Rime Weasel Fluent Theme
+# 作者：Snowy1949
+# 版本：拼音字母显示在输入法候选框内
+#
+# 使用方法：将本文件复制到 Rime 用户目录，重命名为
+# weasel.custom.yaml，然后重新部署小狼毫。
+#
+# 本文件只负责小狼毫界面样式，不包含词库、语言模型、Lua
+# 过滤器或输入方案设置。候选数量需要在输入方案中另行设置。
+
+patch:
+  "preset_color_schemes/+":
+
+    # Windows 亮色模式
+    Spring:
+      name: "春日／Spring"
+      author: Snowy1949
+      color_format: argb
+
+      # 窗口背景、边框与阴影
+      back_color: 0xFFB7E5F2
+      border_color: 0x00000000
+      shadow_color: 0x40686868
+
+      # 拼音预编辑文字
+      text_color: 0xFF101416
+      hilited_text_color: 0xFF101416
+      hilited_back_color: 0xFFB7E5F2
+      hilited_shadow_color: 0x00686868
+
+      # 普通候选
+      candidate_back_color: 0x00000000
+      candidate_shadow_color: 0x00000000
+      candidate_text_color: 0xFF101416
+      label_color: 0xFF101416
+      comment_text_color: 0xFF586A70
+
+      # 高亮候选
+      hilited_mark_color: 0xFF195DB1
+      hilited_candidate_back_color: 0xFFB0DCE8
+      hilited_candidate_shadow_color: 0x00686868
+      hilited_candidate_text_color: 0xFF101416
+      hilited_label_color: 0xFF101416
+
+      # 翻页按钮
+      nextpage_color: 0xFF1F1F1F
+      prevpage_color: 0xFF7F969E
+
+    # Windows 深色模式
+    SpringDark:
+      name: "春日夜间／Spring Dark"
+      author: Snowy1949
+      color_format: argb
+
+      # 窗口背景、边框与阴影
+      back_color: 0xFF1F3A7B
+      border_color: 0x00000000
+      shadow_color: 0x70000000
+
+      # 拼音预编辑文字
+      text_color: 0xFFFFFFFF
+      hilited_text_color: 0xFFFFFFFF
+      hilited_back_color: 0xFF1F3A7B
+      hilited_shadow_color: 0x00000000
+
+      # 普通候选
+      candidate_back_color: 0x00000000
+      candidate_shadow_color: 0x00000000
+      candidate_text_color: 0xFFFFFFFF
+      label_color: 0xFFFFFFFF
+      comment_text_color: 0xFFBAC2D6
+
+      # 高亮候选
+      hilited_mark_color: 0xFF78C6FF
+      hilited_candidate_back_color: 0xFF2C4683
+      hilited_candidate_shadow_color: 0x00000000
+      hilited_candidate_text_color: 0xFFFFFFFF
+      hilited_label_color: 0xFFFFFFFF
+      hilited_comment_text_color: 0xFFDDE2EC
+
+      # 翻页按钮
+      nextpage_color: 0xFFFFFFFF
+      prevpage_color: 0xFF7F8EB3
+
+  # 根据 Windows 亮暗模式自动切换。
+  "style/color_scheme": Spring
+  "style/color_scheme_dark": SpringDark
+
+  # 候选排列方式。
+  "style/antialias_mode": cleartype
+  "style/candidate_list_layout": linear
+  "style/horizontal": true
+
+  # 候选词与 Emoji 字体。
+  "style/font_face": "Microsoft YaHei UI, Segoe UI Emoji"
+  "style/font_point": 11
+
+  # 候选注释字体。
+  "style/comment_font_face": "Microsoft YaHei UI"
+  "style/comment_font_point": 11
+
+  # 候选数字字体与格式。
+  "style/label_font_face": "Microsoft YaHei UI"
+  "style/label_font_point": 11
+  "style/label_format": "%s"
+
+  # false：拼音显示在小狼毫候选框第一行。
+  "style/inline_preedit": false
+  "style/preedit_type": composition
+
+  # 文字对齐与行距。
+  "style/layout/align_type": center
+  "style/layout/baseline": 100
+  "style/layout/linespacing": 140
+
+  # 边框和圆角。
+  "style/layout/border_width": 0
+  "style/layout/corner_radius": 7
+  "style/layout/round_corner": 7
+
+  # 候选项目之间的间距。
+  "style/layout/candidate_spacing": 25
+  "style/layout/hilite_spacing": 0
+  "style/layout/spacing": 6
+
+  # 高亮候选框内边距。
+  "style/layout/hilite_padding": 5
+  "style/layout/hilite_padding_x": 8
+  "style/layout/hilite_padding_y": 3
+
+  # 整个候选窗的外边距。
+  "style/layout/margin_x": 12
+  "style/layout/margin_y": 7
+
+  # 高度保持统一；宽度根据实际候选数量动态变化。
+  "style/layout/min_height": 60
+  "style/layout/min_width": 0
+  "style/layout/max_width": 0
+
+  # 窗口阴影。
+  "style/layout/shadow_offset_x": 0
+  "style/layout/shadow_offset_y": 2
+  "style/layout/shadow_radius": 4
+
+  # 不显示额外标记字符。
+  "style/mark_text": ""
